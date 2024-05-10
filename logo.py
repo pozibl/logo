@@ -23,10 +23,8 @@ def main():
     coords_gen = []
     size = 100
     for i in range(size):
-        for j in range(size):
-            if not i % 10 and not j % 10 and i == j :
-                coords_gen.append([i, j])
         if not i % 10:
+            coords_gen.append([i, i])
             coords_gen.append([i, size - i])
             coords_gen.append([size - i, size - i])
             coords_gen.append([size - i, i])
